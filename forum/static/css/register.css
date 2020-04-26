@@ -1,0 +1,122 @@
+#regblock {
+	width: 410px;
+	background-color: white;
+
+    border: 1px;
+    border-style: solid;
+    border-color: #EDEFF1;
+    border-radius: 7px;
+
+	margin: auto;
+	margin-top: 25px;
+}
+
+#regfields {
+	width: 350px;
+	margin: auto;
+}
+
+
+.reg_form [type = "email"], [type = "text"], [type = "password"] {
+	height: 28px;
+	width: 350px;
+	font-size: 15px;
+
+	align-items: center;
+
+	border-style: solid;
+	border-width: 0.75px;
+	border-color: #BBC0C4;
+	border-radius: 3px;
+
+	margin-bottom: 14px;
+	margin-top: 5px;
+
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 8px;
+}
+
+.reg_form [type = "text"]:focus, [type = "password"]:focus, [type = "email"]:focus {
+	border: 0.75px solid #74BAEE;
+	-webkit-box-shadow: 0px 0px 2px 0.5px #74BAEE;
+	-moz-box-shadow: 0px 0px 2px 0.5px #74BAEE;
+	box-shadow: 0px 0px 2px 0.5px #74BAEE;
+}
+
+
+#first_name [type = "text"] {
+	margin-right: 20px;
+	float: left;
+	width: 165px;
+}
+
+#first_name_text {
+	margin-right: 110px;
+}
+
+#last_name [type = "text"] {
+	float: right;
+	width: 165px;
+}
+
+#regbutton {
+	margin-left: 142px;
+	margin-right: 142px;
+	margin-top: 15px;
+	font-size: 16px;
+
+	width: 126px;
+	height: 36px;
+
+	border: 1px;
+	border-style: solid;
+	border-radius: 4px;
+	border-color: #0079D3;
+
+	background-color: #0079D3;
+	color: white;
+}
+
+#regbutton:hover {
+	cursor: pointer;
+	opacity: 80%;
+}
+
+#reg_text {
+	font-size: 30px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	text-align: center;
+}
+
+.form_text {
+	font-weight: bold;
+}
+
+#already {
+	font-size: 15px;
+	padding-top: 22px;
+	padding-bottom: 20px;
+	text-align: center;
+	color: #6A737C;
+}
+
+#already>a {
+	color: #0077CC;
+}
+
+#pass_text {
+	color: #6A737C;
+	margin-bottom: 14px;
+}
+
+#pass [type = "password"] {
+	margin-bottom: 5px;
+}
+
+#errors {
+	color: #D1383D;
+	margin-left: 30px;
+	margin-right: 30px;
+}

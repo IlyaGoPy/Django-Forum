@@ -1,0 +1,55 @@
+{% extends 'base.html' %}   
+{% load static %}
+{% block title %}Sign Up{% endblock %}
+
+
+{% block styles %}<link rel="stylesheet" href="{% static 'css/register.css' %}">{% endblock %}
+
+{% block content %}
+<form method="POST" id="regblock" autocomplete="off">
+	{% csrf_token %}
+	<h2 id="reg_text">Sign Up</h2>
+	<div id="regfields">
+		<p class="form_text">Username</p>
+		<p class="reg_form">{{form.username}}</p>
+		<span class="form_text" id="first_name_text">First name</span>
+		<span class="form_text">Last name</span>
+		<div class="reg_form" id="first_name">{{form.first_name}}</div>
+		<div class="reg_form" id="last_name">{{form.last_name}}</div>
+
+		<p class="form_text">E-mail</p>
+		<p class="reg_form">{{form.email}}</p>
+		<p class="form_text">Password</p>
+		<p class="reg_form" id="pass">{{form.password1}}</p>
+		<p id="pass_text">Your password must contain at least 8 characters.</p>
+		<p class="form_text" >Password Confirmation</p>
+		<p class="reg_form" id="pass">{{form.password2}}</p>
+	</div>
+	<div id="errors">
+	{% if form.errors %}
+    	{% for field in form %}
+	        {% for error in field.errors %}
+				{%if error == "This field is required."%}
+					Username field is required.
+				{% elif error == "This password is too short. It must contain at least 8 characters." %}
+					This password is too short.
+				{% elif error == "Enter a valid email address." %}
+					Enter correct email address.
+				{% else %}
+					{{error}}
+				{% endif %}
+	        {% endfor %}
+	        {% for error in field.non_fields_errors %}
+					{{error}}
+	        {% endfor %}
+    	{% endfor %}
+	{% endif %}
+	</div>
+	
+
+	<input type="submit" name="create_user" id="regbutton" value="Sign Up">
+	<p id="already">Already have an account? <a href="{% url 'home:login' %}">Log in</a></p>
+</form>
+
+
+{% endblock %}

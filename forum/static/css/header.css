@@ -1,0 +1,54 @@
+header {
+	background-color: white;
+
+	height: 48px;
+	width: 100%;
+
+	border-bottom: 1px solid #EDEFF1;
+}
+
+#header_img {
+	height: 32px;
+	margin: 8px;
+	margin-left: 20px;
+}
+
+#sign_up {
+	float: right;
+	
+	width: 120px;
+	height: 32px;
+
+	margin: 8px;
+	margin-right: 20px;
+
+	border: 1px;
+	border-style: solid;
+	border-radius: 4px;
+	border-color: #0079D3;
+	background-color: #0079D3;
+	color: white;
+}
+
+#sign_up:hover {
+	opacity: 80%;
+}
+
+
+#log_in {
+	float: right;
+	width: 120px;
+	height: 32px;
+	margin: 8px;
+
+	border: 1px;
+	border-style: solid;
+	border-radius: 4px;
+	border-color: #0079D3;
+	background-color: white;
+	color: #0079D3;
+}
+
+#log_in:hover {
+	opacity: 95%;
+}

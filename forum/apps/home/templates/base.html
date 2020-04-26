@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="{% static 'img/tab_icon.png' %}" type="image/png">
+	<link rel="stylesheet" href="{% static 'css/settings.css' %}">
+	<link rel="stylesheet" href="{% static 'css/header.css' %}">
+	{% block styles %}{% endblock %}
+	<title>{% block title %}Django forum{%endblock%}</title>
+
+</head>
+<body>
+
+	<header>
+		<a href="{% url 'home:index' %}"><img id="header_img" src= "{%static 'img/header_img.png' %}"></a>
+		<a href="{% url 'home:register' %}"><button id="sign_up">SIGN UP</button></a>
+		<a href="{% url 'home:login' %}"><button id="log_in">LOG IN</button></a>
+	</header>
+		
+	{% block content %}
+	{% endblock %}
+
+</body>
+</html>
