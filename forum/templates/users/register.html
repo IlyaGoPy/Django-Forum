@@ -1,6 +1,6 @@
-{% extends 'base.html' %}   
+{% extends 'base/base.html' %}   
 {% load static %}
-{% block title %}Sign Up{% endblock %}
+{% block title %}Sign Up - Django forum{% endblock %}
 
 
 {% block styles %}<link rel="stylesheet" href="{% static 'css/register.css' %}">{% endblock %}
@@ -48,7 +48,7 @@
 	
 
 	<input type="submit" name="create_user" id="regbutton" value="Sign Up">
-	<p id="already">Already have an account? <a href="{% url 'home:login' %}">Log in</a></p>
+	<p id="already">Already have an account? <a href="{% url 'users:login' %}">Log in</a></p>
 </form>
 
 
