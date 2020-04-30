@@ -6,7 +6,7 @@
 {% block styles %}<link rel="stylesheet" href="{% static 'css/register.css' %}">{% endblock %}
 
 {% block content %}
-<form method="POST" id="regblock" autocomplete="off">
+<form method="POST" id="regblock" action="" autocomplete="off">
 	{% csrf_token %}
 	<h2 id="reg_text">Sign Up</h2>
 	<div id="regfields">

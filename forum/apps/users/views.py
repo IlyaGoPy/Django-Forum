@@ -1,8 +1,12 @@
 from django.shortcuts import render
-from .forms import CreateUserForm
+from .forms import CreateUserForm, LoginForm
+from django.contrib.auth import authenticate, login, logout	
 
-def login(request):
-	return render(request, 'users/login.html')
+def log_in(request):
+	form = LoginForm()
+	if request.method == 'POST':
+		form = LoginForm(request.POST)
+	return render(request, 'users/login.html', {'form': form})
 
 def register(request):
 	form = CreateUserForm()
