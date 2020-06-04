@@ -3,7 +3,7 @@
 
 {% block title %}Log In - Django forum{% endblock %}
 
-{% block styles %}<link rel="stylesheet" href="{% static 'css/login.css' %}">{% endblock %}
+{% block styles %}<link rel="stylesheet" href="{% static 'css/users/login.css' %}">{% endblock %}
 
 {% block content %}
     <form method="POST" id="log_block" action="" autocomplete="off">
@@ -12,9 +12,15 @@
         <div id="login_block">
             <h2 id="log_text">Log In</h2>
             <p id="sug_text">Username</p>
-            <p class="log_fields">{{form.username}}</p>
+            <input class="log_fields" name="username">
             <p id="sug_text">Password</p>
-            <p class="log_fields">{{form.password}}</p>
+            <input class="log_fields" name="password" type="password">
+
+            <div id="errors">
+                {% if errors %}
+                Username or password is incorrect.
+                {% endif %}
+            </div>
 
             <input type="submit" name="log_in" id="log_button" value="Log In">
             <p id="havent_acc">Don't have an account? <a href="{% url 'users:register' %}">Sing up</a></p>

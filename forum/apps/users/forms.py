@@ -1,5 +1,5 @@
 from django.contrib.auth.models import User
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth.forms import UserCreationForm
 from django import forms
 
 
@@ -18,7 +18,3 @@ class CreateUserForm(UserCreationForm):
 		self.fields['password1'].widget.attrs.update({'required': True, 'maxlength': 35})
 		self.fields['password2'].widget.attrs.update({'required': True, 'maxlength': 35})
 		
-class LoginForm(AuthenticationForm):
-	def __init__(self, *args, **kwargs):
-		super().__init__(*args, **kwargs)
-		self.fields['username'].widget.attrs.update({'autofocus': False})
