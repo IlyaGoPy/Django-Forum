@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .forms import CreateUserForm
 from django.contrib.auth import authenticate, login, logout	
 
+
 def log_in(request):
 
 	if request.method == 'POST':
@@ -20,9 +21,11 @@ def log_in(request):
 
 	return render(request, 'users/login.html', context)
 
+
 def logoutUser(request):
 	logout(request)
 	return redirect('/')
+
 
 def register(request):
 	form = CreateUserForm()
