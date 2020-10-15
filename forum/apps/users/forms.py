@@ -9,6 +9,7 @@ class CreateUserForm(UserCreationForm):
 		fields = ["username", "email", "first_name", "last_name"]
 		error_css_class = 'error'
 
+	
 	def __init__(self, *args, **kwargs):
 		super().__init__(*args, **kwargs)
 		self.fields['username'].widget.attrs.update({'autofocus': False, 'maxlength': 15})
